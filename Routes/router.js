@@ -8,9 +8,11 @@ router.get('/all-employees', getEmployees)
 router.put('/update-leave-status/:id', updateLeaveStatus)
 router.get('/all-leaves', getLeaves)
 
-// user routes 
+
 router.post('/emp-register', registerEmployee)
 router.post('/emp-login', loginEmployee)
+
+// Employee routes 
 router.get('/myleaves/:employeeId', getLeavesById)
 router.post('/apply-leave', applyLeave)
 
