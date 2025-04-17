@@ -10,6 +10,6 @@ dotenv.config()
 dbCoonect()
 app.use(router)
 const PORT = process.env.PORT || 8000;
-app.listen(8000, () => {
-    console.log("server Is running on port 8000");
+app.listen(PORT, () => {
+    console.log("server Is running on port: 8000");
 })
