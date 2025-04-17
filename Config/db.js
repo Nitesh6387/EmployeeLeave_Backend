@@ -1,10 +1,16 @@
 const mongoose = require('mongoose')
 
+const mongoURI = 'mongodb+srv://niteshverma6387:nFXuzYHdsPDPBWCD@emp.nualdlh.mongodb.net/?retryWrites=true&w=majority';
 const dbCoonect = async () => {
-    const conn = await mongoose.connect('mongodb://localhost:27017/EmployeeLeave')
-    if (conn) {
-        console.log("mongoDb Connected");
+    try {
+        const conn = await mongoose.connect(mongoURI);
+
+        if (conn) {
+            console.log("MongoDB Connected");
+        }
+    } catch (err) {
+        console.error("MongoDB connection error:", err);
     }
 }
 
-module.exports=dbCoonect;
+module.exports = dbCoonect;
